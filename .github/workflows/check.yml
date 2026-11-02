@@ -1,0 +1,38 @@
+name: Surveillance ateliers Agnellet
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # toutes les 5 min (GitHub peut retarder de quelques minutes)
+  workflow_dispatch:        # bouton "Run workflow" pour tester à la main
+
+permissions:
+  contents: write           # pour commiter state.json
+
+concurrency:
+  group: check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Vérifier les ateliers
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: python3 check_ateliers.py
+
+      - name: Sauvegarder l'état
+        run: |
+          if ! git diff --quiet -- state.json || [ -n "$(git ls-files --others -- state.json)" ]; then
+            git config user.name "atelier-bot"
+            git config user.email "atelier-bot@users.noreply.github.com"
+            git add state.json
+            git commit -m "Mise à jour de l'état des ateliers"
+            git push
+          fi

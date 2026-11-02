@@ -1,0 +1,55 @@
+{
+  "ateliers": {
+    "75387": {
+      "in_stock": false,
+      "name": "Atelier Entremets chocolat – 10/10/2026",
+      "url": "https://patrick-agnellet.com/boutique/framboisier/"
+    },
+    "75388": {
+      "in_stock": false,
+      "name": "Atelier Bûche – 21/11/2026",
+      "url": "https://patrick-agnellet.com/boutique/fraisier/"
+    },
+    "75389": {
+      "in_stock": false,
+      "name": "Atelier Entremets noisettes – 03/10/2026",
+      "url": "https://patrick-agnellet.com/boutique/macaronade-aux-fruits-rouges/"
+    },
+    "75391": {
+      "in_stock": false,
+      "name": "Atelier Profiteroles – 31/10/2026",
+      "url": "https://patrick-agnellet.com/boutique/pavlova-aux-fruits-rouges/"
+    },
+    "75393": {
+      "in_stock": false,
+      "name": "Atelier Bûche – 05/12/2026",
+      "url": "https://patrick-agnellet.com/boutique/dacquoise-aux-fruits/"
+    },
+    "75394": {
+      "in_stock": false,
+      "name": "Atelier Bûche – 28/11/2026",
+      "url": "https://patrick-agnellet.com/boutique/framboisier-2/"
+    },
+    "75395": {
+      "in_stock": false,
+      "name": "Atelier Entremets Marrons – 14/11/2026",
+      "url": "https://patrick-agnellet.com/boutique/entremets-noisettes/"
+    },
+    "75396": {
+      "in_stock": false,
+      "name": "Atelier Pavlova vanille caramel – 07/11/2026",
+      "url": "https://patrick-agnellet.com/boutique/paris-brest-2/"
+    },
+    "75409": {
+      "in_stock": false,
+      "name": "Atelier Galette des rois – 23/01/2027",
+      "url": "https://patrick-agnellet.com/boutique/galette-des-rois/"
+    },
+    "75410": {
+      "in_stock": false,
+      "name": "Atelier Galette des rois – 30/01/2027",
+      "url": "https://patrick-agnellet.com/boutique/galette-des-rois-2/"
+    }
+  },
+  "month": "2026-11"
+}
